@@ -7,7 +7,7 @@
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
         <meta name="author" content="Dreamguys - Bootstrap Admin Template">
         <meta name="robots" content="noindex, nofollow">
-        <title>Nalongo Njala</title>
+        <title>Leave Report - HRMS admin template</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/logos/hamz.png">
@@ -44,7 +44,7 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="index.html" class="logo">
-						<img src="assets/img/ham logo.png" width="40" height="40" alt="Nalongo Njala">
+						<img src="assets/img/ham logo.png" width="40" height="40" alt="hamz bookshop">
 					</a>
                 </div>
 				<!-- /Logo -->
@@ -59,7 +59,7 @@
 				
 				<!-- Header Title -->
                 <div class="page-title-box">
-					<h3>Nalongo Njala</h3>
+					<h3>Hamz Bookshop</h3>
                 </div>
 				<!-- /Header Title -->
 				
@@ -323,152 +323,188 @@
 			
 				<!-- Page Content -->
                 <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col">
+								<h3 class="page-title">Leave Report</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+									<li class="breadcrumb-item active">Leave Report</li>
+								</ul>
+							</div>
+							<div class="col-auto">
+								<a href="#" class="btn btn-primary">PDF</a>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<!-- Search Filter -->
+					<div class="row filter-row mb-4">
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input class="form-control floating" type="text">
+								<label class="focus-label">Employee</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3"> 
+							<div class="form-group form-focus select-focus">
+								<select class="select floating"> 
+									<option>Select Department</option>
+									<option>Designing</option>
+									<option>Development</option>
+									<option>Finance</option>
+									<option>Hr & Finance</option>
+								</select>
+								<label class="focus-label">Department</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<div class="cal-icon">
+									<input class="form-control floating datetimepicker" type="text">
+								</div>
+								<label class="focus-label">From</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<div class="cal-icon">
+									<input class="form-control floating datetimepicker" type="text">
+								</div>
+								<label class="focus-label">To</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<a href="#" class="btn btn-success btn-block"> Search </a>  
+						</div>     
+                    </div>
+					<!-- /Search Filter -->
+					
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card" style="width: 80%; margin: 0 auto; margin-bottom: 2%;">
-								<div class="card-header">
-									<h4 class="card-title mb-0">Press an Order</h4>
-								</div>
-
-								<div class="card-body">
-									<form action="#">
-										<div class="row">
-											<div class="col-xl-11 ml-2">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Product</label>
-													<div class="col-lg-9 d-flex">
-                                                        <input type="number" name="quantity" placeholder="10" class="form-control mr-2" style="width: 100px;">
-														<select name="copies" class="form-control text-left">
-															<option value="Bread">Bread</option>
-															<option value="Mandazi">Mandazi</option>
-															<option value="Cake">Cake</option>
-															<option value="Cap Cake">Cap Cake</option>
-															<option value="Banz">Banz</option>
-															<option value="Chapati">Chapati</option>
-															<option value="Long Bread">Long Bread</option>
-														</select>
-													</div>
-												</div>
-												<div id="newElementId"></div>
-                                                <div class="form-group row">
-													<label class="col-lg-3 col-form-label">Amount</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" placeholder="Total amount Sh.xxxxxxxxx">
-													</div>
-												</div>
-											</div>
-
-											<div class="col-xl-6">
-												<div class="float-left mr-auto">
-                                                    <div class="add-task-btn-wrapper">
-                                                        <input type="button" value="Add Purchase" onclick="createNewElement();" class="add-task-btn btn btn-white btn-sm"/>
-                                                    </div>
-                                                </div>
-											</div>
-										</div>
-
-										<div class="text-right">
-											<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#print_order">Submit</a>
-										</div>
-									</form>
-								</div>
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>Employee</th>
+											<th>Date</th>
+											<th>Department</th>
+											<th>Leave Type</th>
+											<th>No.of Days</th>
+											<th>Remaining Leave</th>
+											<th>Total Leaves</th>
+											<th>Total Leave Taken</th>
+											<th>Leave Carry Forward</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<h2 class="table-avatar">
+													<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
+													<a href="profile.html">John Doe <span>#0001</span></a>
+												</h2>
+											</td>
+											<td>20 Dec 2020</td>
+											<td>Design</td>
+											<td class="text-center">
+												<button class="btn btn-outline-info btn-sm">Sick Leave</button>
+											</td>
+											<td class="text-center"><span class="btn btn-danger btn-sm">05</span></td>
+											<td class="text-center"><span class="btn btn-warning btn-sm"><b>08</b></span></td>
+											<td class="text-center"><span class="btn btn-success btn-sm"><b>20</b></span></td>
+											<td class="text-center">12</td>
+											<td class="text-center">08</td>
+										</tr>
+										<tr>
+											<td>
+												<h2 class="table-avatar">
+													<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-09.jpg"></a>
+													<a href="profile.html">Richard Miles <span>#0002</span></a>
+												</h2>
+											</td>
+											<td>21 Dec 2020</td>
+											<td>Web Developer</td>
+											<td class="text-center">
+												<button class="btn btn-outline-warning btn-sm">Parenting Leave</button>
+											</td>
+											<td class="text-center"><span class="btn btn-danger btn-sm">03</span></td>
+											<td class="text-center"><span class="btn btn-warning btn-sm"><b>08</b></span></td>
+											<td class="text-center"><span class="btn btn-success btn-sm"><b>20</b></span></td>
+											<td class="text-center">12</td>
+											<td class="text-center">05</td>
+										</tr>
+										<tr>
+											<td>
+												<h2 class="table-avatar">
+													<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-10.jpg"></a>
+													<a href="profile.html">John Smith <span>#003</span></a>
+												</h2>
+											</td>
+											<td>22 Dec 2020</td>
+											<td>Android Developer</td>
+											<td class="text-center">
+												<button class="btn btn-outline-danger btn-sm">Emercency Leave</button>
+											</td>
+											<td class="text-center"><span class="btn btn-danger btn-sm">01</span></td>
+											<td class="text-center"><span class="btn btn-warning btn-sm"><b>09</b></span></td>
+											<td class="text-center"><span class="btn btn-success btn-sm"><b>20</b></span></td>
+											<td class="text-center">17</td>
+											<td class="text-center">03</td>
+										</tr>
+										<tr>
+											<td>
+												<h2 class="table-avatar">
+													<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-05.jpg"></a>
+													<a href="profile.html">Mike Litorus <span>#004</span></a>
+												</h2>
+											</td>
+											<td>23 Dec 2020</td>
+											<td>IOS Developer</td>
+											<td class="text-center">
+												<button class="btn btn-outline-info btn-sm">Sick Leave</button>
+											</td>
+											<td class="text-center"><span class="btn btn-danger btn-sm">15</span></td>
+											<td class="text-center"><span class="btn btn-warning btn-sm"><b>05</b></span></td>
+											<td class="text-center"><span class="btn btn-success btn-sm"><b>20</b></span></td>
+											<td class="text-center">15</td>
+											<td class="text-center">05</td>
+										</tr>
+										<tr>
+											<td>
+												<h2 class="table-avatar">
+													<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-11.jpg"></a>
+													<a href="profile.html">Wilmer Deluna <span>#005</span></a>
+												</h2>
+											</td>
+											<td>24 Dec 2020</td>
+											<td>Team Leader</td>
+											<td class="text-center">
+												<button class="btn btn-outline-info btn-sm">Sick Leave</button>
+											</td>
+											<td class="text-center"><span class="btn btn-danger btn-sm">10</span></td>
+											<td class="text-center"><span class="btn btn-warning btn-sm"><b>07</b></span></td>
+											<td class="text-center"><span class="btn btn-success btn-sm"><b>20</b></span></td>
+											<td class="text-center">18</td>
+											<td class="text-center">2</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
-				</div>
+                </div>
 				<!-- /Page Content -->
-
-
-				<!-- print Modal -->
-				<div class="modal custom-modal fade" id="print_order" role="dialog">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Print Order</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col-sm-6 m-b-20">
-														<ul class="list-unstyled">
-															<li>Product 1</li>
-															<li>Product 2</li>
-															<li>Product 3</li>
-															<li>Product 4</li>
-														</ul>
-													</div>
-													<div class="col-sm-6 m-b-20">
-														<ul class="list-unstyled">
-															<li>Sh 1200</li>
-															<li>Sh 2050</li>
-															<li>Sh 3100</li>
-															<li>Sh 4000</li>
-														</ul>
-													</div>
-												</div>
-												<div>
-													<div class="row invoice-payment">
-														<div class="col-sm10">
-															<div class="m-b-20 float-right">
-																<div class="table-responsive no-border">
-																	<table class="table mb-0">
-																		<tbody>
-																			<tr>
-																				<th>Total:</th>
-																				<td class="text-right text-blue"><h4>Sh 8,750</h4></td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</div>
-															</div>
-														</div>
-														<div class="col-sm-10">
-															<button type="button" data-dismiss="modal" class="btn add-btn ml-2" style="background-color: red; border-color: red;">Cancel</button>
-															<button class="btn add-btn" style="background-color: green; border-color: green;"> <i class="la la-print"></i> Print</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- print Modal -->
-
+				
             </div>
 			<!-- /Page Wrapper -->
-			
+
         </div>
 		<!-- /Main Wrapper -->
 
-        <script type="text/JavaScript">
-			// First create a DIV element.
-			var txtNewInputBox = document.createElement('div');
-            
-			// Then add the content (a new input box) of the element.
-			txtNewInputBox.className = 'form-group row'
-			txtNewInputBox.innerHTML = '<label class="col-lg-3 col-form-label">Product</label><div class="col-lg-9 d-flex"><input type="number" name="quantity" placeholder="10" class="form-control mr-2" style="width: 100px;"><select name="copies" class="form-control text-left mr-2"><option value="Bread">Bread</option><option value="Mandazi">Mandazi</option><option value="Cake">Cake</option><option value="Cap Cake">Cap Cake</option><option value="Banz">Banz</option><option value="Chapati">Chapati</option><option value="Long Bread">Long Bread</option></select> <button type="submit" class="btn btn-danger" onclick="removeProduct()"><i class="fa fa-times"></i></button> </div>';
-
-            function createNewElement() {
-				
-                // Finally put it where it is supposed to appear.
-                document.getElementById("newElementId").appendChild(txtNewInputBox);
-            }
-
-			function removeProduct() {
-				document.getElementById('newElementId').removeChild(txtNewInputBox);
-			}
-        </script>
-		
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.5.1.min.js"></script>
 		

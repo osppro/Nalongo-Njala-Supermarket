@@ -7,7 +7,7 @@
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
         <meta name="author" content="Dreamguys - Bootstrap Admin Template">
         <meta name="robots" content="noindex, nofollow">
-        <title>Nalongo Njala</title>
+        <title>Invoice - HRMS admin template</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/logos/hamz.png">
@@ -20,15 +20,6 @@
 		
 		<!-- Lineawesome CSS -->
         <link rel="stylesheet" href="assets/css/line-awesome.min.css">
-		
-		<!-- Datatable CSS -->
-		<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-		
-		<!-- Select2 CSS -->
-		<link rel="stylesheet" href="assets/css/select2.min.css">
-		
-		<!-- Datetimepicker CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
@@ -44,7 +35,7 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="index.html" class="logo">
-						<img src="assets/img/ham logo.png" width="40" height="40" alt="Nalongo Njala">
+						<img src="assets/img/ham logo.png" width="40" height="40" alt="hamz bookshop">
 					</a>
                 </div>
 				<!-- /Logo -->
@@ -59,7 +50,7 @@
 				
 				<!-- Header Title -->
                 <div class="page-title-box">
-					<h3>Nalongo Njala</h3>
+					<h3>Hamz Bookshop</h3>
                 </div>
 				<!-- /Header Title -->
 				
@@ -323,173 +314,189 @@
 			
 				<!-- Page Content -->
                 <div class="content container-fluid">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card" style="width: 80%; margin: 0 auto; margin-bottom: 2%;">
-								<div class="card-header">
-									<h4 class="card-title mb-0">Press an Order</h4>
-								</div>
-
-								<div class="card-body">
-									<form action="#">
-										<div class="row">
-											<div class="col-xl-11 ml-2">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Product</label>
-													<div class="col-lg-9 d-flex">
-                                                        <input type="number" name="quantity" placeholder="10" class="form-control mr-2" style="width: 100px;">
-														<select name="copies" class="form-control text-left">
-															<option value="Bread">Bread</option>
-															<option value="Mandazi">Mandazi</option>
-															<option value="Cake">Cake</option>
-															<option value="Cap Cake">Cap Cake</option>
-															<option value="Banz">Banz</option>
-															<option value="Chapati">Chapati</option>
-															<option value="Long Bread">Long Bread</option>
-														</select>
-													</div>
-												</div>
-												<div id="newElementId"></div>
-                                                <div class="form-group row">
-													<label class="col-lg-3 col-form-label">Amount</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" placeholder="Total amount Sh.xxxxxxxxx">
-													</div>
-												</div>
-											</div>
-
-											<div class="col-xl-6">
-												<div class="float-left mr-auto">
-                                                    <div class="add-task-btn-wrapper">
-                                                        <input type="button" value="Add Purchase" onclick="createNewElement();" class="add-task-btn btn btn-white btn-sm"/>
-                                                    </div>
-                                                </div>
-											</div>
-										</div>
-
-										<div class="text-right">
-											<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#print_order">Submit</a>
-										</div>
-									</form>
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">Invoice</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+									<li class="breadcrumb-item active">Invoice</li>
+								</ul>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<div class="btn-group btn-group-sm">
+									<button class="btn btn-white">CSV</button>
+									<button class="btn btn-white">PDF</button>
+									<button class="btn btn-white"><i class="fa fa-print fa-lg"></i> Print</button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- /Page Content -->
-
-
-				<!-- print Modal -->
-				<div class="modal custom-modal fade" id="print_order" role="dialog">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Print Order</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col-sm-6 m-b-20">
-														<ul class="list-unstyled">
-															<li>Product 1</li>
-															<li>Product 2</li>
-															<li>Product 3</li>
-															<li>Product 4</li>
-														</ul>
-													</div>
-													<div class="col-sm-6 m-b-20">
-														<ul class="list-unstyled">
-															<li>Sh 1200</li>
-															<li>Sh 2050</li>
-															<li>Sh 3100</li>
-															<li>Sh 4000</li>
-														</ul>
-													</div>
-												</div>
-												<div>
-													<div class="row invoice-payment">
-														<div class="col-sm10">
-															<div class="m-b-20 float-right">
-																<div class="table-responsive no-border">
-																	<table class="table mb-0">
-																		<tbody>
-																			<tr>
-																				<th>Total:</th>
-																				<td class="text-right text-blue"><h4>Sh 8,750</h4></td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</div>
-															</div>
-														</div>
-														<div class="col-sm-10">
-															<button type="button" data-dismiss="modal" class="btn add-btn ml-2" style="background-color: red; border-color: red;">Cancel</button>
-															<button class="btn add-btn" style="background-color: green; border-color: green;"> <i class="la la-print"></i> Print</button>
-														</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-6 m-b-20">
+											<img src="assets/img/logo2.png" class="inv-logo" alt="">
+				 							<ul class="list-unstyled">
+												<li>Dreamguy's Technologies</li>
+												<li>3864 Quiet Valley Lane,</li>
+												<li>Sherman Oaks, CA, 91403</li>
+												<li>GST No:</li>
+											</ul>
+										</div>
+										<div class="col-sm-6 m-b-20">
+											<div class="invoice-details">
+												<h3 class="text-uppercase">Invoice #INV-0001</h3>
+												<ul class="list-unstyled">
+													<li>Date: <span>March 12, 2019</span></li>
+													<li>Due date: <span>April 25, 2019</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 col-lg-7 col-xl-8 m-b-20">
+											<h5>Invoice to:</h5>
+				 							<ul class="list-unstyled">
+												<li><h5><strong>Barry Cuda</strong></h5></li>
+												<li><span>Global Technologies</span></li>
+												<li>5754 Airport Rd</li>
+												<li>Coosada, AL, 36020</li>
+												<li>United States</li>
+												<li>888-777-6655</li>
+												<li><a href="#">barrycuda@example.com</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-6 col-lg-5 col-xl-4 m-b-20">
+											<span class="text-muted">Payment Details:</span>
+											<ul class="list-unstyled invoice-payment-details">
+												<li><h5>Total Due: <span class="text-right">$8,750</span></h5></li>
+												<li>Bank name: <span>Profit Bank Europe</span></li>
+												<li>Country: <span>United Kingdom</span></li>
+												<li>City: <span>London E1 8BF</span></li>
+												<li>Address: <span>3 Goodman Street</span></li>
+												<li>IBAN: <span>KFH37784028476740</span></li>
+												<li>SWIFT code: <span>BPT4E</span></li>
+											</ul>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>ITEM</th>
+													<th class="d-none d-sm-table-cell">DESCRIPTION</th>
+													<th>UNIT COST</th>
+													<th>QUANTITY</th>
+													<th class="text-right">TOTAL</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Android Application</td>
+													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+													<td>$1000</td>
+													<td>2</td>
+													<td class="text-right">$2000</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Ios Application</td>
+													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+													<td>$1750</td>
+													<td>1</td>
+													<td class="text-right">$1750</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Codeigniter Project</td>
+													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+													<td>$90</td>
+													<td>3</td>
+													<td class="text-right">$270</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Phonegap Project</td>
+													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+													<td>$1200</td>
+													<td>2</td>
+													<td class="text-right">$2400</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Website Optimization</td>
+													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+													<td>$200</td>
+													<td>2</td>
+													<td class="text-right">$400</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div>
+										<div class="row invoice-payment">
+											<div class="col-sm-7">
+											</div>
+											<div class="col-sm-5">
+												<div class="m-b-20">
+													<div class="table-responsive no-border">
+														<table class="table mb-0">
+															<tbody>
+																<tr>
+																	<th>Subtotal:</th>
+																	<td class="text-right">$7,000</td>
+																</tr>
+																<tr>
+																	<th>Tax: <span class="text-regular">(25%)</span></th>
+																	<td class="text-right">$1,750</td>
+																</tr>
+																<tr>
+																	<th>Total:</th>
+																	<td class="text-right text-primary"><h5>$8,750</h5></td>
+																</tr>
+															</tbody>
+														</table>
 													</div>
 												</div>
 											</div>
+										</div>
+										<div class="invoice-info">
+											<h5>Other information</h5>
+											<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed dictum ligula, cursus blandit risus. Maecenas eget metus non tellus dignissim aliquam ut a ex. Maecenas sed vehicula dui, ac suscipit lacus. Sed finibus leo vitae lorem interdum, eu scelerisque tellus fermentum. Curabitur sit amet lacinia lorem. Nullam finibus pellentesque libero, eu finibus sapien interdum vel</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- print Modal -->
-
+                </div>
+				<!-- /Page Content -->
+				
             </div>
 			<!-- /Page Wrapper -->
-			
+
         </div>
 		<!-- /Main Wrapper -->
 
-        <script type="text/JavaScript">
-			// First create a DIV element.
-			var txtNewInputBox = document.createElement('div');
-            
-			// Then add the content (a new input box) of the element.
-			txtNewInputBox.className = 'form-group row'
-			txtNewInputBox.innerHTML = '<label class="col-lg-3 col-form-label">Product</label><div class="col-lg-9 d-flex"><input type="number" name="quantity" placeholder="10" class="form-control mr-2" style="width: 100px;"><select name="copies" class="form-control text-left mr-2"><option value="Bread">Bread</option><option value="Mandazi">Mandazi</option><option value="Cake">Cake</option><option value="Cap Cake">Cap Cake</option><option value="Banz">Banz</option><option value="Chapati">Chapati</option><option value="Long Bread">Long Bread</option></select> <button type="submit" class="btn btn-danger" onclick="removeProduct()"><i class="fa fa-times"></i></button> </div>';
-
-            function createNewElement() {
-				
-                // Finally put it where it is supposed to appear.
-                document.getElementById("newElementId").appendChild(txtNewInputBox);
-            }
-
-			function removeProduct() {
-				document.getElementById('newElementId').removeChild(txtNewInputBox);
-			}
-        </script>
-		
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.5.1.min.js"></script>
-		
+
 		<!-- Bootstrap Core JS -->
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-		
+
 		<!-- Slimscroll JS -->
 		<script src="assets/js/jquery.slimscroll.min.js"></script>
-		
-		<!-- Select2 JS -->
-		<script src="assets/js/select2.min.js"></script>
-		
-		<!-- Datatable JS -->
-		<script src="assets/js/jquery.dataTables.min.js"></script>
-		<script src="assets/js/dataTables.bootstrap4.min.js"></script>
-		
-		<!-- Datetimepicker JS -->
-		<script src="assets/js/moment.min.js"></script>
-		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-		
+
 		<!-- Custom JS -->
 		<script src="assets/js/app.js"></script>
 		
