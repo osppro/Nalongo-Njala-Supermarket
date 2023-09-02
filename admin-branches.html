@@ -247,17 +247,7 @@
 									<li><a href="admin-shop-orders.html">Shop</a></li>
 									<li><a href="admin-shop-milk-orders.html">Milk</a></li>
 								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-chart-line"></i> <span> Sales </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="admin-estimates.html">Estimates</a></li>
-									<li><a href="admin-invoices.html">Invoices</a></li>
-									<li><a href="admin-payments.html">Payments</a></li>
-									<li><a href="admin-expenses.html">Expenses</a></li>
-									<li><a href="admin-taxes.html">Taxes</a></li>
-								</ul>
-							</li>
+							</li><li><a href="admin-invoices.html"><i class="la la-book"></i><span> Invoices</span></a></li>
 							<li>
 								<a href="admin-clients.html"><i class="la la-users"></i> <span> Customers</span> </a>
 							</li>
@@ -350,18 +340,83 @@
                                                         <input type="number" name="quantity" placeholder="Enter quantity" class="form-control">
 													</div>
 												</div>
-                                                <!-- <div class="form-group row">
+                                                <div class="form-group row">
 													<label class="col-lg-2 col-form-label">Amount</label>
 													<div class="col-lg-10">
 														<input type="text" class="form-control" placeholder="Enter amount">
 													</div>
-												</div> -->
+												</div>
 											</div>
 										</div>
 
 										<div class="text-right">
-											<button type="submit" class="btn btn-primary">Send</button>
+											<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#print_order">Send</a>
 										</div>
+
+										<!-- reciept Modal -->
+										<div class="modal custom-modal fade" id="print_order" role="dialog">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">Print Order</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="card">
+																	<div class="card-body">
+																		<div class="row">
+																			<div class="col-sm-6 m-b-20">
+																				<ul class="list-unstyled">
+																					<li>Product 1</li>
+																					<li>Product 2</li>
+																					<li>Product 3</li>
+																					<li>Product 4</li>
+																				</ul>
+																			</div>
+																			<div class="col-sm-6 m-b-20">
+																				<ul class="list-unstyled">
+																					<li>Sh 1200</li>
+																					<li>Sh 2050</li>
+																					<li>Sh 3100</li>
+																					<li>Sh 4000</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div>
+																			<div class="row invoice-payment">
+																				<div class="col-sm10">
+																					<div class="m-b-20">
+																						<div class="table-responsive no-border">
+																							<table class="table mb-0">
+																								<tbody>
+																									<tr>
+																										<th>Total:</th>
+																										<td class="text-right text-blue"><h4>Sh 8,750</h4></td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="col-sm-10">
+																					<button type="button" data-dismiss="modal" class="btn add-btn ml-2" style="background-color: red; border-color: red;">Cancel</button>
+																					<button class="btn add-btn" style="background-color: green; border-color: green;"> <i class="la la-print"></i> Print</button>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- reciept Modal -->
 									</form>
 								</div>
 							</div>
@@ -369,6 +424,8 @@
 					</div>
 				</div>
 				<!-- /Page Content -->
+
+				
 
             </div>
 			<!-- /Page Wrapper -->

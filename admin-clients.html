@@ -19,10 +19,16 @@
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		
 		<!-- Lineawesome CSS -->
-		<link rel="stylesheet" href="assets/css/line-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+		
+		<!-- Datatable CSS -->
+		<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 		
 		<!-- Select2 CSS -->
 		<link rel="stylesheet" href="assets/css/select2.min.css">
+		
+		<!-- Datetimepicker CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
@@ -250,17 +256,7 @@
 									<li><a href="admin-shop-orders.html">Shop</a></li>
 									<li><a href="admin-shop-milk-orders.html">Milk</a></li>
 								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-chart-line"></i> <span> Sales </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="admin-estimates.html">Estimates</a></li>
-									<li><a href="admin-invoices.html">Invoices</a></li>
-									<li><a href="admin-payments.html">Payments</a></li>
-									<li><a href="admin-expenses.html">Expenses</a></li>
-									<li><a href="admin-taxes.html">Taxes</a></li>
-								</ul>
-							</li>
+							</li><li><a href="admin-invoices.html"><i class="la la-book"></i><span> Invoices</span></a></li>
 							<li>
 								<a href="admin-clients.html"><i class="la la-users"></i> <span> Customers</span> </a>
 							</li>
@@ -330,10 +326,6 @@
 							</div>
 							<div class="col-auto float-right ml-auto">
 								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_client"><i class="fa fa-plus"></i> Add Client</a>
-								<div class="view-icons">
-									<a href="clients.html" class="grid-view btn btn-link"><i class="fa fa-th"></i></a>
-									<a href="clients-list.html" class="list-view btn btn-link active"><i class="fa fa-bars"></i></a>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -649,201 +641,47 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="col-form-label">First Name <span class="text-danger">*</span></label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" placeholder="Enter first name">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="col-form-label">Last Name</label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" placeholder="Enter last name">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="col-form-label">Username <span class="text-danger">*</span></label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" placeholder="Enter username">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="col-form-label">Email <span class="text-danger">*</span></label>
-												<input class="form-control floating" type="email">
+												<input class="form-control floating" type="email" placeholder="Enter email">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Password</label>
-												<input class="form-control" type="password">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="col-form-label">Confirm Password</label>
-												<input class="form-control" type="password">
-											</div>
-										</div>
-										<div class="col-md-6">  
-											<div class="form-group">
-												<label class="col-form-label">Client ID <span class="text-danger">*</span></label>
-												<input class="form-control floating" type="text">
+												<label class="col-form-label">Location</label>
+												<input class="form-control" type="text" placeholder="Enter location(optional)">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="col-form-label">Phone </label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" placeholder="Enter phone number">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="col-form-label">Company Name</label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" placeholder="Enter Company name(optional)">
 											</div>
 										</div>
 									</div>
-									<div class="table-responsive m-t-15">
-										<table class="table table-striped custom-table">
-											<thead>
-												<tr>
-													<th>Module Permission</th>
-													<th class="text-center">Read</th>
-													<th class="text-center">Write</th>
-													<th class="text-center">Create</th>
-													<th class="text-center">Delete</th>
-													<th class="text-center">Import</th>
-													<th class="text-center">Export</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Projects</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Tasks</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Chat</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Estimates</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Invoices</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Timing Sheets</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+									
 									<div class="submit-section">
 										<button class="btn btn-primary submit-btn">Submit</button>
 									</div>
@@ -922,149 +760,6 @@
 											</div>
 										</div>
 									</div>
-									<div class="table-responsive m-t-15">
-										<table class="table table-striped custom-table">
-											<thead>
-												<tr>
-													<th>Module Permission</th>
-													<th class="text-center">Read</th>
-													<th class="text-center">Write</th>
-													<th class="text-center">Create</th>
-													<th class="text-center">Delete</th>
-													<th class="text-center">Import</th>
-													<th class="text-center">Export</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Projects</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Tasks</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Chat</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Estimates</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Invoices</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-												<tr>
-													<td>Timing Sheets</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-													<td class="text-center">
-														<input checked="" type="checkbox">
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
 									<div class="submit-section">
 										<button class="btn btn-primary submit-btn">Save</button>
 									</div>
@@ -1118,6 +813,14 @@
 		
 		<!-- Select2 JS -->
 		<script src="assets/js/select2.min.js"></script>
+		
+		<!-- Datatable JS -->
+		<script src="assets/js/jquery.dataTables.min.js"></script>
+		<script src="assets/js/dataTables.bootstrap4.min.js"></script>
+		
+		<!-- Datetimepicker JS -->
+		<script src="assets/js/moment.min.js"></script>
+		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 		
 		<!-- Custom JS -->
 		<script src="assets/js/app.js"></script>

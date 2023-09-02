@@ -32,6 +32,7 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
+		
     </head>
     <body>
 		<!-- Main Wrapper -->
@@ -255,17 +256,7 @@
 									<li><a href="admin-shop-orders.html">Shop</a></li>
 									<li><a href="admin-shop-milk-orders.html">Milk</a></li>
 								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-chart-line"></i> <span> Sales </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="admin-estimates.html">Estimates</a></li>
-									<li><a href="admin-invoices.html">Invoices</a></li>
-									<li><a href="admin-payments.html">Payments</a></li>
-									<li><a href="admin-expenses.html">Expenses</a></li>
-									<li><a href="admin-taxes.html">Taxes</a></li>
-								</ul>
-							</li>
+							</li><li><a href="admin-invoices.html"><i class="la la-book"></i><span> Invoices</span></a></li>
 							<li>
 								<a href="admin-clients.html"><i class="la la-users"></i> <span> Customers</span> </a>
 							</li>
@@ -332,6 +323,9 @@
 									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
 									<li class="breadcrumb-item active">Expenses</li>
 								</ul>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<a href="#" class="btn add-btn ml-2" data-toggle="modal" data-target="#add_expense"><i class="fa fa-plus"></i> Add expense</a>
 							</div>
 						</div>
 					</div>
@@ -462,6 +456,71 @@
 					</div>
                 </div>
 				<!-- /Page Content -->
+
+				<!-- Add bakery expense Modal -->
+				<div id="add_expense" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Add milk expense</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Spent on</label>
+												<input class="form-control" type="text" placeholder="Spent on">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Purchase From</label>
+												<input class="form-control" type="text" placeholder="Enter purchase from">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Purchase date</label>
+												<input class="form-control floating datetimepicker" type="text" placeholder="Enter today date">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Paid with</label>
+												<input class="form-control" type="text" placeholder="State type of payment">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Status</label>
+												<select name="status" class="form-control">
+													<option value="">--select status--</option>
+													<option value="pending">Pending</option>
+													<option value="approved">Approved</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Price</label>
+												<input class="form-control" type="text" placeholder="Enter amount spent">
+											</div>
+										</div>
+									</div>
+
+									<div class="submit-section">
+										<button class="btn btn-primary submit-btn">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Add bakery expense Modal -->
 				
             </div>
 			<!-- /Page Wrapper -->
