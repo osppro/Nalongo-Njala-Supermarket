@@ -8,21 +8,16 @@
         <meta name="author" content="Dreamguys - Bootstrap Admin Template">
         <meta name="robots" content="noindex, nofollow">
         <title>Login - HRMS admin template</title>
-		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/logos/hamz.png">
-		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
 		<!-- Fontawesome CSS -->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body class="account-page">
-	
 		<!-- Main Wrapper -->
         <div class="main-wrapper">
 			<div class="account-content">
